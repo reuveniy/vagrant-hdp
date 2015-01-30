@@ -44,6 +44,7 @@
             	{ "name": "HCAT" },
             	{ "name": "OOZIE_CLIENT" },
             	{ "name": "PIG" },
+            	{ "name": "KAFKA_BROKER" },
             	{ "name": "SQOOP" },
             	{ "name": "ZOOKEEPER_CLIENT" }
         	]
@@ -64,6 +65,7 @@
             	{ "name": "HBASE_REGIONSERVER" },
             	{ "name": "GANGLIA_MONITOR" },
             	{ "name": "NODEMANAGER" },
+            	{ "name": "KAFKA_BROKER" },
             	{ "name": "SUPERVISOR" },
             	{ "name": "FLUME_HANDLER" }
         	]
@@ -85,6 +87,7 @@
             	{ "name": "GANGLIA_MONITOR" },
             	{ "name": "NODEMANAGER" },
             	{ "name": "SUPERVISOR" },
+            	{ "name": "KAFKA_BROKER" },
             	{ "name": "FLUME_HANDLER" }
         	]
         }
