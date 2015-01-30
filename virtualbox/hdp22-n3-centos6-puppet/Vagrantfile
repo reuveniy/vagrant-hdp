@@ -56,7 +56,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		config.vm.provision "shell", inline: "sudo mkdir -p /var/lib/ambari-server/resources && sudo chown root:vagrant /var/lib/ambari-server/resources && chmod 775 /var/lib/ambari-server/resources"
         config.vm.provision "file", source: "../../files/jdk-7u67-linux-x64.tar.gz", destination: "/var/lib/ambari-server/resources/jdk-7u67-linux-x64.tar.gz"
 		config.vm.provision "shell", inline: "sudo chown root:root /var/lib/ambari-server/resources && sudo chmod 755 /var/lib/ambari-server/resources"
-		
+
+		config.vm.provision "shell", inline: "if [ -f /vagrant/yum/repokeeper.sh ]; then sudo /vagrant/yum/repokeeper.sh; done"
+
         config.vm.provision "puppet" do |puppet|
             puppet.manifests_path = MANIFESTS_PATH
             puppet.module_path = MODULES_PATH
